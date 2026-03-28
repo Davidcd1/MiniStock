@@ -29,7 +29,7 @@ function iniciarNovoProduto() {
         }
 
         try {
-            const response = await fetch(`${CONFIG.BASE_URL}/produtos`, {
+            const response = await fetch(`${CONFIG.BASE_URL}produtos`, {
                 method: "POST",
                 headers: {
                     "Authorization": `Bearer ${localStorage.getItem("token")}`

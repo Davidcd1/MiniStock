@@ -33,7 +33,7 @@ async function carregarProdutos() {
 
     try {
         const token = localStorage.getItem("token");
-        const url = `${CONFIG.BASE_URL}/produtos?busca=${termoBusca}&pagina=${paginaAtual}&ordenarPor=${ordenarPor}&direcao=${direcao}`;
+        const url = `${CONFIG.BASE_URL}produtos?busca=${termoBusca}&pagina=${paginaAtual}&ordenarPor=${ordenarPor}&direcao=${direcao}`;
 
         const response = await fetch(url, {
             headers: { "Authorization": `Bearer ${token}` }

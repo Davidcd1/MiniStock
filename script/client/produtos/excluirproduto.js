@@ -7,7 +7,7 @@ async function excluirProduto(id, nome) {
     if (!confirm(`Deseja realmente excluir o produto: ${nome}?`)) return;
 
     const token = localStorage.getItem("token");
-    const url = `${CONFIG.BASE_URL}/produtos/${id}`;
+    const url = `${CONFIG.BASE_URL}produtos/${id}`;
 
     try {
         const response = await fetch(url, {
