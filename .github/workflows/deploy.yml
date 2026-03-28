@@ -13,24 +13,23 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout do código
         uses: actions/checkout@v4
 
       - name: Criar config.js dinamicamente
         run: |
-          # O robô cria a pasta script se ela não existir e gera o arquivo
           mkdir -p script
           echo "const CONFIG = { BASE_URL: '${{ secrets.BASE_URL }}' };" > script/config.js
-          echo "✅ config.js gerado com a URL da API!"
+          echo "✅ Arquivo config.js gerado com sucesso!"
 
-      - name: Setup Pages
+      - name: Configurar GitHub Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload Artifact
+      - name: Upload dos arquivos
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy para o Pages
         id: deployment
         uses: actions/deploy-pages@v4
