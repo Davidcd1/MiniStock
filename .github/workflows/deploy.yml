@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Criar config.js dinamicamente
-        run: |
+        run: 
           mkdir -p script
           echo "const CONFIG = { API_URL: '${{ secrets.API_URL }}' };" > script/config.js
           echo "✅ Arquivo config.js gerado com sucesso!"
