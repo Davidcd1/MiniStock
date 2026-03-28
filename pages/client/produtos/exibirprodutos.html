@@ -1,0 +1,51 @@
+<div class="py-3">
+    <div class="d-flex justify-content-between align-items-center mb-4 page-header-mobile">
+        <h2 class="fw-bold m-0 text-main">
+            <i class="bi bi-box-seam me-2 text-accent"></i>Estoque
+        </h2>
+        <button class="ms-btn ms-btn-primary" onclick="carregarPagina('novo-produto')">
+            <i class="bi bi-plus-lg"></i> Novo Produto
+        </button>
+    </div>
+
+    <div class="ms-auth-card mb-4 p-2 border-0 shadow-sm" style="background: var(--bg-card); border-radius: 12px;">
+        <div class="input-group">
+            <span class="input-group-text bg-transparent border-0 text-sub ps-3">
+                <i class="bi bi-search"></i>
+            </span>
+            <input type="text" id="filtro-busca" class="form-control bg-transparent border-0 text-main ms-input-clean" 
+                   placeholder="Buscar produtos..." onkeyup="aoDigitarBusca(event)">
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table align-middle mb-0">
+            <thead>
+                <tr>
+                    <th class="ps-4">Foto</th>
+                    <th class="sortable text-sub" onclick="definirOrdenacao('nome')">
+                        Produto <i class="bi bi-arrow-down-up ms-1 small" id="sort-icon-nome"></i>
+                    </th>
+                    <th class="text-sub">Descrição</th>
+                    <th class="text-center sortable text-sub" onclick="definirOrdenacao('preco')">
+                        Preço <i class="bi bi-arrow-down-up ms-1 small" id="sort-icon-preco"></i>
+                    </th>
+                    <th class="text-center sortable text-sub" onclick="definirOrdenacao('quantidade')">
+                        Qtd <i class="bi bi-arrow-down-up ms-1 small" id="sort-icon-quantidade"></i>
+                    </th>
+                    <th class="text-end pe-4 text-sub">Ações</th>
+                </tr>
+            </thead>
+            <tbody id="lista-produtos">
+                </tbody>
+        </table>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center p-3 mt-2">
+        <div class="text-sub small">
+            Mostrando <span id="count-mostrando" class="text-main fw-bold">0</span> de 
+            <span id="count-total" class="text-main fw-bold">0</span>
+        </div>
+        <div id="paginacao" class="d-flex gap-2"></div>
+    </div>
+</div>

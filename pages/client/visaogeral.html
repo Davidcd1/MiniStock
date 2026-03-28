@@ -1,0 +1,36 @@
+<div class="py-3">
+    <h2 class="fw-bold" style="color: var(--text-main);">
+        Olá, <span id="dash-user-name" style="color: var(--accent);">...</span>! 👋
+    </h2>
+    <p style="color: var(--text-sub);">Aqui está o que está acontecendo na sua loja hoje.</p>
+    
+    <div class="row g-4 mt-2">
+        <div class="col-md-4">
+            <div class="ms-feature-card">
+                <small class="text-uppercase fw-bold" style="color: var(--accent)">Servidor</small>
+                <h4 class="mt-2" style="color: var(--text-main);">Online</h4>
+                <p class="mb-0" style="color: var(--text-sub);">API conectada com sucesso.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="ms-feature-card">
+                <small class="text-uppercase fw-bold" style="color: var(--accent)">Estoque</small>
+                <h4 class="mt-2" style="color: var(--text-main);">Novo Item</h4>
+                <button class="ms-btn ms-btn-primary mt-2 w-100" onclick="carregarPagina('novo-produto')">
+                    Cadastrar Produto
+                </button>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="ms-feature-card">
+                <small class="text-uppercase fw-bold" style="color: var(--accent)">Relatórios</small>
+                <h4 class="mt-2" style="color: var(--text-main);">Produtos</h4>
+                <button class="ms-btn ms-btn-outline mt-2 w-100" onclick="carregarPagina('produtos')">
+                    Ver Listagem
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

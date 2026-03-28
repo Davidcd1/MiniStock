@@ -1,0 +1,42 @@
+<div class="py-3">
+    <div class="ms-auth-card" style="max-width: 100%; margin-top: 20px;">
+        <h2 class="fw-bold mb-1" style="color: var(--text-main);">Cadastrar Produto</h2>
+        <p class="text-muted mb-4">Preencha as informações para adicionar ao estoque.</p>
+
+        <form id="form-novo-produto" class="row g-3">
+            <div class="col-md-6">
+                <label class="ms-label">Nome do Produto</label>
+                <input type="text" id="nome" class="ms-input" placeholder="Ex: Teclado Mecânico" required>
+            </div>
+
+            <div class="col-md-3">
+                <label class="ms-label">Preço (R$)</label>
+                <input type="number" id="preco" step="0.01" class="ms-input" placeholder="0,00" required>
+            </div>
+
+            <div class="col-md-3">
+                <label class="ms-label">Quantidade</label>
+                <input type="number" id="quantidade" class="ms-input" placeholder="0" required>
+            </div>
+
+            <div class="col-12">
+                <label class="ms-label">Descrição</label>
+                <textarea id="descricao" class="ms-input" rows="3" style="height: auto;" placeholder="Detalhes do produto..."></textarea>
+            </div>
+
+            <div class="col-12">
+                <label class="ms-label">Imagem do Produto</label>
+                <input type="file" id="imagem" class="ms-input" accept="image/*" style="padding: 8px;">
+            </div>
+
+            <div class="col-12 mt-4 d-flex gap-2">
+                <button type="submit" id="btnSalvarNovo" class="ms-btn ms-btn-primary">
+                    <i class="bi bi-plus-lg"></i> Criar Produto
+                </button>
+                <button type="button" class="ms-btn ms-btn-outline" onclick="carregarPagina('produtos')">
+                    Cancelar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

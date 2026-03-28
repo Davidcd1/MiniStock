@@ -1,0 +1,72 @@
+/* 🎨 MINISTOCK | Global Styles & Design System
+   Define a paleta de cores, tipografia e componentes base do sistema.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    /* Paleta Light - Tons cinza 'concreto' e 'gelo' */
+    --bg-body: #e2e8f0; 
+    --bg-card: #f4f4f5; 
+    --text-main: #27272a; 
+    --text-sub: #71717a; 
+
+    /* Identidade Visual - Laranja Assinatura */
+    --accent: #f4702a; 
+    --accent-hover: #d95f21;
+
+    /* Elementos de Interface */
+    --border: rgba(0, 0, 0, 0.08); 
+    --input-bg: #e4e4e7; 
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    --table-hover: rgba(244, 112, 42, 0.04);
+}
+
+.dark-mode {
+    /* Paleta Dark - Alto contraste e profundidade */
+    --bg-body: #08090a; 
+    --bg-card: rgba(18, 20, 24, 0.8); 
+    --text-main: #f1f5f9; 
+    --text-sub: #64748b;
+    --border: rgba(255, 255, 255, 0.05); 
+    --input-bg: rgba(0, 0, 0, 0.3);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    --table-hover: rgba(255, 255, 255, 0.02);
+}
+
+* { box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+body {
+    margin: 0;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    transition: background 0.3s ease;
+}
+
+/* Auxiliares de Cor e Tipografia */
+.text-accent { color: var(--accent) !important; }
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3, 
+.dark-mode label, .dark-mode .ms-label, .dark-mode .text-muted {
+    color: var(--text-main) !important;
+}
+
+/* Componentes de Ação (Botões e Toggles) */
+.ms-btn {
+    padding: 10px 20px; border-radius: 10px; font-weight: 700;
+    cursor: pointer; border: none; transition: all 0.2s ease;
+}
+
+.ms-btn-primary { background: var(--accent); color: #ffffff !important; }
+.ms-btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); }
+
+.ms-btn-outline, .theme-toggle {
+    background-color: transparent; border: 1px solid var(--border);
+    color: var(--text-main); padding: 10px 14px; border-radius: 10px;
+    cursor: pointer; transition: all 0.2s ease;
+}
+
+/* Customização da Barra de Rolagem */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-body); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 10px; }

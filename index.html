@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>MiniStock | Controle de Estoque</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/global.css">
+    <script src="./script/auth/auth.js"></script>
+</head>
+<body>
+
+<nav class="ms-navbar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a href="#" class="navbar-brand">MiniStock</a>
+        <div class="d-flex gap-2 align-items-center">
+            <button id="theme-toggle" class="theme-toggle">🌙</button>
+            <div class="d-none d-sm-flex gap-2">
+                <a href="./pages/auth/login.html" class="ms-btn ms-btn-outline">Entrar</a>
+            </div>
+            <a href="./pages/auth/register.html" class="ms-btn ms-btn-primary">Criar conta</a>
+        </div>
+    </div>
+</nav>
+
+<section class="ms-hero text-center py-5">
+    <div class="container">
+        <h1 class="display-5 fw-bold">Controle seu estoque <span style="color: var(--accent);">sem complicação</span></h1>
+        <p style="color: var(--text-sub)" class="fs-5 mb-4 px-3">Gerencie produtos, acompanhe vendas e tenha uma visão clara do seu negócio.</p>
+        <div class="d-flex flex-column flex-sm-row justify-content-sm-center gap-3 px-4 px-sm-0">
+            <a href="./pages/auth/register.html" class="ms-btn ms-btn-primary px-sm-5">Começar agora</a>
+            <a href="./pages/auth/login.html" class="ms-btn ms-btn-outline px-sm-5">Entrar</a>
+        </div>
+    </div>
+</section>
+
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-12 col-md-3">
+                <div class="ms-feature-card">
+                    <h3>📦</h3>
+                    <h4 class="fw-bold">Estoque</h4>
+                    <p style="color: var(--text-sub)">Saiba exatamente o que entra e sai do seu estoque.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="ms-feature-card">
+                    <h3>🛠️</h3>
+                    <h4 class="fw-bold">Produtos</h4>
+                    <p style="color: var(--text-sub)">Cadastre e organize seus produtos com facilidade.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="ms-feature-card">
+                    <h3>💸</h3>
+                    <h4 class="fw-bold">Vendas</h4>
+                    <p style="color: var(--text-sub)">Registre vendas e acompanhe o faturamento.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="ms-feature-card">
+                    <h3>📊</h3>
+                    <h4 class="fw-bold">Visão Geral</h4>
+                    <p style="color: var(--text-sub)">Indicadores claros para decisões melhores.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5" style="background-color: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-5">Como funciona</h2>
+        <div class="row g-4">
+            <div class="col-12 col-md-4">
+                <div class="p-3">
+                    <h5 class="fw-bold">1️⃣ Crie sua conta</h5>
+                    <p style="color: var(--text-sub)">Cadastre sua loja em poucos passos de forma gratuita.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="p-3">
+                    <h5 class="fw-bold">2️⃣ Cadastre produtos</h5>
+                    <p style="color: var(--text-sub)">Adicione seus produtos, fotos e quantidades iniciais.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="p-3">
+                    <h5 class="fw-bold">3️⃣ Acompanhe tudo</h5>
+                    <p style="color: var(--text-sub)">Veja seu estoque atualizar automaticamente a cada venda.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-5 text-center">
+    <div class="container py-4">
+        <h2 class="fw-bold mb-4">Pronto para organizar seu negócio?</h2>
+        <a href="./pages/auth/register.html" class="ms-btn ms-btn-primary" style="padding: 15px 40px; font-size: 1.1rem;">
+            Criar conta gratuitamente
+        </a>
+    </div>
+</section>
+
+<footer class="text-center py-4 border-top" style="border-color: var(--border) !important; margin-top: auto;">
+    <small style="color: var(--text-sub)">Developed by David Carvalho</small>
+</footer>
+
+<script src="./script/theme.js"></script>
+</body>
+</html>
