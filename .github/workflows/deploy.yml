@@ -19,7 +19,7 @@ jobs:
       - name: Criar config.js dinamicamente
         run: |
           mkdir -p script
-          echo "const CONFIG = { BASE_URL: '${{ secrets.BASE_URL }}' };" > script/config.js
+          echo "const CONFIG = { API_URL: '${{ secrets.API_URL }}' };" > script/config.js
           echo "✅ Arquivo config.js gerado com sucesso!"
 
       - name: Configurar GitHub Pages
