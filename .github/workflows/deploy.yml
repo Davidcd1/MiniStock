@@ -1,0 +1,36 @@
+name: Deploy MiniStock
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Criar config.js dinamicamente
+        run: |
+          # O robô cria a pasta script se ela não existir e gera o arquivo
+          mkdir -p script
+          echo "const CONFIG = { API_URL: '${{ secrets.API_URL }}' };" > script/config.js
+          echo "✅ config.js gerado com a URL da API!"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
