@@ -20,7 +20,7 @@ jobs:
         run: |
           # O robô cria a pasta script se ela não existir e gera o arquivo
           mkdir -p script
-          echo "const CONFIG = { API_URL: '${{ secrets.BASE_URL }}' };" > script/config.js
+          echo "const CONFIG = { BASE_URL: '${{ secrets.BASE_URL }}' };" > script/config.js
           echo "✅ config.js gerado com a URL da API!"
 
       - name: Setup Pages
