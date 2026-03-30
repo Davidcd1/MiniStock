@@ -2,7 +2,7 @@
    Gerencia a criação de novas contas e validação de credenciais.
 */
 
-const registerUrl = `${CONFIG.BASE_URL}auth/register`;
+const registerUrl = `${CONFIG.API_URL}auth/register`;
 
 document.getElementById("registerForm").addEventListener("submit", async function (event) {
     event.preventDefault();

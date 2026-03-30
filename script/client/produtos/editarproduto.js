@@ -13,7 +13,7 @@ async function iniciarEdicaoProduto(id) {
 
     try {
         // 1. Busca dados do produto para preencher os campos
-        const response = await fetch(`${CONFIG.BASE_URL}produtos/${id}`, {
+        const response = await fetch(`${CONFIG.API_URL}produtos/${id}`, {
             headers: { "Authorization": `Bearer ${token}` }
         });
 
@@ -85,7 +85,7 @@ async function iniciarEdicaoProduto(id) {
             if (fileInput.files[0]) formData.append("Imagem", fileInput.files[0]);
 
             try {
-                const putResponse = await fetch(`${CONFIG.BASE_URL}produtos/${id}`, {
+                const putResponse = await fetch(`${CONFIG.API_URL}produtos/${id}`, {
                     method: 'PUT',
                     headers: { "Authorization": `Bearer ${token}` },
                     body: formData // Content-Type é definido automaticamente pelo navegador

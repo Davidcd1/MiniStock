@@ -2,7 +2,7 @@
    Gerencia o envio de credenciais e armazenamento da sessão.
 */
 
-const loginUrl = `${CONFIG.BASE_URL}auth/login`;
+const loginUrl = `${CONFIG.API_URL}auth/login`;
 
 document.getElementById("loginForm").addEventListener("submit", async function (event) {
     event.preventDefault();
